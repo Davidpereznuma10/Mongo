@@ -1,0 +1,4 @@
+const database = "sample_training";
+use(database);
+
+db.zips.find({ state: "NY"}).count()
