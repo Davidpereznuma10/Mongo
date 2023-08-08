@@ -1,0 +1,15 @@
+const database ="Platzi_store";
+use(database);
+
+db.products.updateOne(
+  //query
+  {_id: ObjectId('64d2d0a38398b4384fb0dea6')},
+  //Change => operators
+  {
+    $inc: {
+      price: 200
+    }
+  });
+
+db.products.find();
+
