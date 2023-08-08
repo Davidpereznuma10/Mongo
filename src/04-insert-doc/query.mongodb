@@ -1,0 +1,4 @@
+const database = "Platzi_store";
+use(database);
+
+db.products.find()
