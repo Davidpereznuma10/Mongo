@@ -1,0 +1,11 @@
+const databases = "Platzi_store"
+use(databases)
+
+db.products.insertOne({
+  name: "product 1",
+  price: 100
+})
+db.products.insertOne({
+  name: "product 2",
+  price: 500
+})
