@@ -1,0 +1,32 @@
+const database = "Platzi_store";
+use(database);
+
+
+db.products.drop()
+
+db.products.insertMany([
+  {
+    _id:1,
+    name:"products1",
+    price: 1
+  },
+  {_id:2,
+    name:"products2",
+    price: 2
+  },
+  {
+    _id:3,
+    name:"products3",
+    price: 3
+  },
+  {
+    _id:4,
+    name:"products4",
+    price: 4
+  }
+],{
+  ordered: false
+})
+
+
+db.products.find()
