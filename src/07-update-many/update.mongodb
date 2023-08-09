@@ -1,0 +1,16 @@
+const database = "sample_training";
+use(database);
+
+
+db.zips.updateMany(
+  //query
+  {
+    city: "CLEVELAND"
+  },
+  //pudate - operators
+  {
+    $inc:{
+      pop: 1000
+    }
+  }
+)
