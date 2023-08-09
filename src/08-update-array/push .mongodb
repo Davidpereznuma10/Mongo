@@ -1,0 +1,8 @@
+const database = "Platzi_store";
+use(database);
+
+db.inventory.updateMany({},{
+  $push:{
+    tags:"headphone"
+  }
+})
