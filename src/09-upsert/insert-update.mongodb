@@ -1,0 +1,23 @@
+const database  ="Platzi_store";
+use(database);
+
+// Actualizar un documento sin sobre escribirlo
+db.iot.updateOne({
+    sensor: "A001",
+    date: "2022-01-03"
+  },{
+    $push:{
+    readings: 2023
+  }
+})
+
+// //Eliminar el ultimo documento
+// db.iot.updateOne({
+//   sensor: "A001",
+//   date: "2022-01-03"
+// },{
+//   $pop:{
+//   readings: 1
+// }
+// })
+

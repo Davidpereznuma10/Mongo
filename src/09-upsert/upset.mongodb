@@ -1,0 +1,14 @@
+const database  ="Platzi_store";
+use(database);
+
+// Actualizar
+db.iot.updateOne({
+    sensor: "A001",
+    date: "2022-01-04"
+  },{
+    $push:{
+    readings: 2000
+  }
+},{
+  upsert:true
+})
