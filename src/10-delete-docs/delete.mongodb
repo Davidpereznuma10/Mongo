@@ -1,0 +1,13 @@
+const database = "Platzi_store"
+use(database)
+
+// // delte one elemnt
+// db.products.deleteOne({_id: 1})
+
+
+// // dele many elements
+// db.products.deleteMany({price: 100})
+
+// // Delete everything
+db.products.drop({})
+
