@@ -1,0 +1,44 @@
+const database = "sample_training";
+use(database);
+
+//set
+// db.zips.updateMany(
+//   //query
+//   {
+//     city: "CLEVELAND"
+//   },
+//   //pudate - operators
+//   {
+//     $set:{
+//       myatribute: "nada"
+//     }
+//   }
+// )
+
+//update
+// db.zips.updateMany(
+//   //query
+//   {
+//     city: "CLEVELAND"
+//   },
+//   //update - operators
+//   {
+//     $rename:{
+//       myatribute: "my_data"
+//     }
+//   }
+// )
+
+//unset
+db.zips.updateMany(
+  //query
+  {
+    city: "CLEVELAND"
+  },
+  //pudate - operators
+  {
+    $unset:{
+      top: ""
+    }
+  }
+)
