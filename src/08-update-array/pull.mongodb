@@ -1,0 +1,10 @@
+const database = "Platzi_store";
+use(database);
+
+db.inventory.updateMany({},{
+  $pull:{
+    tags:{
+    $in: [ "headphone", "school" ]
+  }
+  }
+})
