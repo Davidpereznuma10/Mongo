@@ -1,0 +1,14 @@
+const database = "Platzi_store";
+use(database);
+
+
+//Using $eq
+// db.inventory.find({qty:20})
+// db.inventory.find({qty:{$eq:20}})
+// db.inventory.find({ "item.name" : "ab" })
+// db.inventory.find({ "item.code" : "123" })
+
+
+//usin $ne
+db.inventory.find({qty: { $ne : 20 }})
+db.inventory.find({ "item.name" :{$ne: "ab"} })

@@ -1,0 +1,14 @@
+const database ="Platzi_store"
+use(database)
+
+db.inventory.updateMany(
+  {
+    qty: {$ne : 20}
+  },{
+    $push:{
+      tags: "C"
+    }
+  },{
+    upser:true
+  }
+)
