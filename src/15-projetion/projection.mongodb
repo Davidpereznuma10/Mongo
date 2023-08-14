@@ -1,0 +1,13 @@
+const database = "sample_training"
+use(database)
+
+db.trips.find(
+  //query
+  {tripduration: { $gte: 500 } },
+  //projection
+  {
+    _id: 0,
+    tripduration: 1,
+    usertype: 1
+  }
+)
