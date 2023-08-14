@@ -1,0 +1,30 @@
+const database = "Platzi_store"
+use(database)
+
+// // $in, values & arrays
+// db.inventory.find( {qty: {$in:[20,25]}} )
+// db.inventory.find({ tags: {$in: ["electronics", "book", ]}})
+
+// // $nin, values & arrays
+// db.inventory.find( { qty: {$nin: [25,20]}})
+// db.inventory.find({ tags: {$nin: ["electronics", "book", ]}})
+
+//This operator just get the documents that have the tags in the orden that we set it
+// db.inventory.find({ tags: "book" })
+// db.inventory.find({ tags: ["school","book"] })
+// db.inventory.find({ tags: ["book","school"] })
+
+// // Arrays $all
+// db.inventory.find({ tags: {$all: ["book","school"]} })
+
+// // Arrays $size
+db.inventory.find({ tags: {$size: 2}})
+
+// // Arrays $elemMatch
+db.survey.find({
+  results:
+    {$elemMatch: {
+      product: "xyz",
+      score: {$gte : 7 }
+    }}
+  })
