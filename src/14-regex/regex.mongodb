@@ -1,0 +1,14 @@
+const database ="Platzi_store";
+use(database);
+// //Nomal get
+// db.inventory.find({"item.description":"Single line description."})
+// // Get a item by just one word
+// db.inventory.find({"item.description": { $regex : /line/ } })
+// //Get wiothout care about the kind of letter
+// db.inventory.find({"item.description": { $regex : /LINE/i } })
+// //document that finished with the set word
+// db.inventory.find({"item.description": { $regex : /line$/i } })
+// //document that begin with the set word
+// db.inventory.find({"item.description": { $regex : /^single/i } })
+// //add the operator "m" to add the multiline and find all line that star wirh the set letter
+db.inventory.find({"item.description": { $regex : /^s/im } })
