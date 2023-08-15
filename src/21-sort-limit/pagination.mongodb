@@ -1,0 +1,7 @@
+const database = "Platzi_store"
+use(database)
+
+db.categories
+  .find({})
+  .skip(1)
+  .limit(2)

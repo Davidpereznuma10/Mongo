@@ -1,0 +1,8 @@
+const database = "sample_training"
+use(database)
+
+db.zips
+  .find({ pop: { $gte: 100}},{_id:0})
+  .sort({ pop: 1 })
+  .limit(2)
+
